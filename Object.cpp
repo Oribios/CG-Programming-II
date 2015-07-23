@@ -60,7 +60,6 @@ void Object::Render(const Camera& camera){
 }
 
 
-
 void Object::BuildTriangles(const GLuint& perRow, const GLuint& perColumn){
 	int numValuesPerRow = 18 * perRow;
 	int numValues = 18 * perRow * perColumn;

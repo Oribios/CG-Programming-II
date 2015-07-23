@@ -1,0 +1,19 @@
+//ObjLoader.h
+////////////////////////////////////////////////////////////
+#include "Application.h"
+#include "Object.h"
+#include <vector>
+
+
+#pragma once
+
+class ObjLoader: public Object {
+public:
+	ObjLoader();
+	~ObjLoader();
+
+private:
+	void buildMesh();
+	bool loadOBJ(const char * path,	std::vector <glm::vec3> & out_vertices, std::vector <glm::vec2> & out_uvs, std::vector <glm::vec3> & out_normals);
+};
+

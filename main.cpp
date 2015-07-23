@@ -149,6 +149,8 @@ double getDeltaTime(){
 }
 
 int main(){
+
+
 	if(InitWindowFailed() | InitGlewFailed()){
 		return EXIT_WITH_ERROR;
 	}

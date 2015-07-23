@@ -33,6 +33,8 @@ World::World(){
 	cube = new Cube();
 	//GLuint textureID = plane->LoadBMP("test.bmp");
 	//GLuint textureID = plane->LoadBMP("dirt.bmp");
+
+	Mesh = new ObjLoader();
 	GLuint textureID = plane->LoadBMP("world.bmp");
 
 	//load world...
@@ -134,17 +136,25 @@ World::~World(){
 	//delete plane;
 	//plane = NULL;
 
-	delete cube;
-	cube = NULL;
+	//delete cube;
+	//cube = NULL;
+
+	delete Mesh;
+	Mesh = NULL;
+
 }
 
 void World::Update(const float& deltaTime){
 
 	//plane->Update(deltaTime);
-	cube->Update(deltaTime);
+	//cube->Update(deltaTime);
+	Mesh->Update(deltaTime);
+
+
 }
 
 void World::Render(const Camera& camera){
 	//plane->Render(camera);
-	cube->Render(camera);
+	//cube->Render(camera);
+	Mesh->Render(camera);
 }
