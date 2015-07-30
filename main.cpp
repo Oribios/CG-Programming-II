@@ -1,9 +1,12 @@
 #include "Application.h"
 #include "World.h"
+#include "Controls.h"
 
 #pragma once
 
 GLFWwindow* window = NULL;
+
+float deltaTime = 0.0f;
 
 void window_refresh_callback(GLFWwindow* window){
 	//world.Render(camera);
@@ -172,25 +175,27 @@ int main(){
 
 
 
-	
 
-	#if 1    //Comment this in to render lines...
+
+#if 0     //Comment this in to render lines...
 	glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
-	#endif
+#endif
 
 
 	do{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
+		computeForwardVector();
 		//Getting delta time...
-		float deltaTime = (float)getDeltaTime();
+		deltaTime = (float)getDeltaTime();
 
 		// Camera matrix
 		camera.viewMatrix = lookAt(
-			vec3(0,0,9), // Camera is at (4,3,3), in World Space
-			vec3(0,0,0), // and looks at the origin
-			vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
+			position,           // Camera is here
+			position+direction, // and looks here : at the same position, plus "direction"
+			up 
 			);
+
+
 
 		world.Update(deltaTime);
 		world.Render(camera);

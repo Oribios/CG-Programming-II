@@ -1,3 +1,8 @@
+//Application.h
+///////////////////////////////////////
+
+
+#pragma once
 //GLEW provides the function pointers we need to access the latest features in openGL.
 #include <GL/glew.h>    //Must be included before gl.h and glfw.h.
 
@@ -21,7 +26,8 @@
 #include <string>
 #include <functional>
 
-#pragma once
+extern float deltaTime;
+
 
 //Namespaces…
 using namespace glm; //For openGL mathematics
