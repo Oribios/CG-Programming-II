@@ -1,4 +1,8 @@
+//World.cpp
+///////////////////////////////////////
 #include "World.h"
+
+
 
 namespace{
 	const u8 MAX_BUFFER_SIZE = 64;
@@ -26,7 +30,7 @@ static void FillBuffer(u8 *src, u8 *dest, u16 &index, u16 const &length){
 
 //TODO: Add functionality later...
 World::World(){
-	plane = new Plane(1, 1);
+	//plane = new Plane(1, 1);
 	/*plane->SetScale(vec3(0.15f));
 	plane->SetPosition(vec3(-1.0f, -1.0f, 0.0f));*/
 
@@ -35,7 +39,6 @@ World::World(){
 	//GLuint textureID = plane->LoadBMP("dirt.bmp");
 
 	Mesh = new ObjLoader();
-	GLuint textureID = plane->LoadBMP("world.bmp");
 
 	//load world...
 	ifstream myfile(LEVEL_0);

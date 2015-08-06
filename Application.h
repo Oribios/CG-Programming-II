@@ -1,19 +1,14 @@
 //Application.h
 ///////////////////////////////////////
-
-
 #pragma once
 //GLEW provides the function pointers we need to access the latest features in openGL.
 #include <GL/glew.h>    //Must be included before gl.h and glfw.h.
-
 //GLFW provides window creation and input control.
 #include <glfw3.h>
-
 //GLM provides openGL mathematics.
 #define GLM_FORCE_RADIANS	//Defining this before glm to ignore warnings we don't care about...
 #include <glm/glm.hpp>
 #include "glm/gtc/matrix_transform.hpp"
-
 //Standard Headers…
 #include <stdio.h>
 #include <memory.h>
@@ -25,6 +20,7 @@
 #include <fstream>
 #include <string>
 #include <functional>
+#include <vector>
 
 extern float deltaTime;
 

@@ -1,7 +1,6 @@
+//World.h
+//////////////////////////////
 #include "Object.h"
-#include "Plane.h"
-#include "Ball.h"
-#include "Paddle.h"
 #include "Cube.h"
 #include "ObjLoader.h"
 
@@ -29,7 +28,6 @@ class World{
 		unsigned char FindChar(const char* buffer, const char& c);
 		
 	private:
-		Plane* plane;
 		Object* cube;
 		u8* levelBuffer;
 		u8* textureBuffer;

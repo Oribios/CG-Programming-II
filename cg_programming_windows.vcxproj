@@ -101,25 +101,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Controls.cpp" />
     <ClCompile Include="Cube.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjLoader.cpp" />
-    <ClCompile Include="Paddle.cpp" />
-    <ClCompile Include="Plane.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
-    <ClInclude Include="Ball.h" />
     <ClInclude Include="Controls.h" />
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjLoader.h" />
-    <ClInclude Include="Paddle.h" />
-    <ClInclude Include="Plane.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
